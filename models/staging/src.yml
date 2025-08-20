@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw
+    database: postgres
+    schema: public
+    tables:
+      - name: orders
+        description: "Raw ecommerce orders table"
+        loaded_at_field: order_date
+        freshness:
+          warn_after: {count: 2, period: day}
+          error_after: {count: 7, period: day}

@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: "Product dimension derived from orders + seed mapping."
+    columns:
+      - name: product_sk
+        tests: [not_null, unique]
+      - name: product_name
+        tests: [not_null]
+      - name: product_category
+      - name: category_group
+        tests:
+          - accepted_values:
+              values: ['Hardgoods', 'Softgoods', 'Unknown']
+
+  - name: fact_orders
+    description: "Incremental order facts enriched with product dimension."
+    columns:
+      - name: order_id
+        tests: [not_null, unique]
+      - name: order_date
+        tests: [not_null]
+      - name: gross_amount
+      - name: payment_method
+        tests:
+          - accepted_values:
+              values: ['Credit Card','PayPal','Apple Pay','Debit Card','Gift Card','Cash']
