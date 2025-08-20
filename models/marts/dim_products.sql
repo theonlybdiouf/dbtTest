@@ -22,4 +22,4 @@ select
     product_name,
     product_category,
     coalesce(category_group, 'Unknown') as category_group
-from mapped;
+from mapped
