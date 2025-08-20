@@ -18,8 +18,6 @@ mapped as (
 )
 
 select
-    -- replace:
-    -- {{ dbt_utils.generate_surrogate_key(['product_name']) }} as product_sk,
     md5(coalesce(product_name, '')) as product_sk,
     product_name,
     product_category,
