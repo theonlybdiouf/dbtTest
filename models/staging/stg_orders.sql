@@ -22,4 +22,4 @@ validated as (
       and unit_price >= 0
 )
 
-select * from validated;
+select * from validated

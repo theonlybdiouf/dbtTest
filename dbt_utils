@@ -1,0 +1,13 @@
+packages:
+  # choose ONE line based on your dbt version:
+  # for dbt-core 1.8.x:
+  - package: dbt-labs/dbt_utils
+    version: [">=1.3.0", "<1.4.0"]
+
+  # for dbt-core 1.7.x:
+  # - package: dbt-labs/dbt_utils
+  #   version: [">=1.2.0", "<1.3.0"]
+
+  # for dbt-core 1.6.x:
+  # - package: dbt-labs/dbt_utils
+  #   version: [">=1.1.1", "<1.2.0"]

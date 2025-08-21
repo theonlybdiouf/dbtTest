@@ -33,4 +33,4 @@ with_product as (
       on b.product_name = p.product_name
 )
 
-select * from with_product;
+select * from with_product
